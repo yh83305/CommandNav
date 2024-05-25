@@ -28,6 +28,6 @@ pip install pyaudio<br />
 pip install -U openai-whisper<br />
 需要在https://huggingface.co/google-bert/bert-base-uncased/tree/main中下载pytorch_model.bin，放到send_goals/src/BERT/bert-base-uncased<br />
 使用bert.py训练模型，模型命名为train_furniture2.pth<br />
-以上两个模型在send_goals/src/nlu.py中调用，可自行修改
+以上两个模型在send_goals/src/nlu.py中调用，可自行修改<br />
 启动语义查询<br />
 roslaunch send_goals clip_nav.launch<br />
