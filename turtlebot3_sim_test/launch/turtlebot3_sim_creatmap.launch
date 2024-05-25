@@ -1,0 +1,14 @@
+<launch>
+    <!-- 运行gazebo -->
+    <include file="$(find turtlebot3_sim_test)/launch/turtlebot3_sim_gazebo.launch" />
+    <!-- 运行rviz -->
+    <include file="$(find turtlebot3_sim_test)/launch/turtlebot3_sim_rviz.launch" />
+    
+    <!-- 运行gmapping -->
+    <include file="$(find turtlebot3_sim_test)/launch/turtlebot3_sim_gmapping.launch" />
+    <!-- 运行keyboard -->
+    <arg name="cmd_topic" default="cmd_vel" />
+      <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop">
+        <remap from="cmd_vel" to="$(arg cmd_topic)" />
+      </node>
+</launch>

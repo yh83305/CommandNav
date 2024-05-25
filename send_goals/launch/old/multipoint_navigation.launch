@@ -1,0 +1,4 @@
+<launch>
+    <!--label-->
+    <node pkg="send_goals" type="multipoint_navigation.py" name="multi_nav" output="screen"/>
+</launch>

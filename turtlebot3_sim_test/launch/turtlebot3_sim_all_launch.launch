@@ -1,0 +1,17 @@
+<launch>
+    <!-- 设置地图的配置文件 -->
+    <arg name="map" default="map2.yaml" />
+    <!-- 运行地图服务器，并且加载设置的地图-->
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find turtlebot3_sim_test)/maps/$(arg map)"/>
+    <!-- 启动AMCL节点 -->
+    <include file="$(find turtlebot3_sim_test)/launch/turtlebot3_sim_amcl.launch" />
+
+    <!-- 运行move_base节点 -->
+    <include file="$(find turtlebot3_sim_test)/launch/turtlebot3_sim_move_base.launch" />
+    <!-- 运行rviz -->
+    <include file="$(find turtlebot3_sim_test)/launch/turtlebot3_sim_rviz.launch" />
+    <!-- 运行gazebo -->
+
+    <include file="$(find turtlebot3_sim_test)/launch/small_house.launch" />
+
+</launch>

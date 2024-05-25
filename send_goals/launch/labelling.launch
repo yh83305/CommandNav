@@ -1,0 +1,8 @@
+<launch>
+    <!--label-->
+    <!--
+    <node pkg="send_goals" type="collect_label.py" name="label" output="screen"/>
+    -->
+    <!--all_launch_file-->
+    <include file="$(find turtlebot3_sim_test)/launch/turtlebot3_sim_all_launch.launch" />
+</launch>

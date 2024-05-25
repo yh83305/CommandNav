@@ -1,0 +1,4 @@
+<launch>
+    <!--label-->
+    <node pkg="send_goals" type="collect_label.py" name="label" output="screen"/>
+</launch>

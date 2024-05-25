@@ -1,0 +1,6 @@
+<launch>
+    <!--label-->
+
+    <node pkg="send_goals" type="whisper_speech.py" name="whisper" output="screen"/>
+
+</launch>

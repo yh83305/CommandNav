@@ -1,0 +1,4 @@
+<launch>
+    <!--label-->
+    <node pkg="send_goals" type="navigation_test.py" name="test" output="screen"/>
+</launch>

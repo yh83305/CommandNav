@@ -1,0 +1,9 @@
+<launch>
+    <!--label-->
+
+    <include file="$(find turtlebot3_sim_test)/launch/turtlebot3_sim_all_launch.launch" />
+    <node pkg="send_goals" type="speech_input.py" name="whisper" output="screen"/>
+    <node pkg="send_goals" type="nlu.py" name="nlu" output="screen"/>
+    <node pkg="send_goals" type="clip_inference.py" name="clip_inference" output="screen"/>
+
+</launch>

@@ -1,0 +1,16 @@
+<launch>
+    <!--label-->
+    <include file="$(find turtlebot3_sim_test)/launch/turtlebot3_sim_all_launch.launch" />
+
+    <node pkg="send_goals" type="yolo-clip-main.py" name="yolo" />
+    
+    <node pkg="send_goals" type="view1.py" name="yolo_view1" output="screen"/>
+    <node pkg="send_goals" type="view2.py" name="yolo_view2" output="screen"/>
+    
+    <node pkg="send_goals" type="marker_publish.py" name="marker_publish" />
+    <node pkg="send_goals" type="clip_saver.py" name="clip_saver" output="screen"/>
+    
+    <!--
+    <node pkg="send_goals" type="yolo_cal_marker.py" name="yolo_cal" />
+    -->
+</launch>

@@ -1,0 +1,20 @@
+<launch>
+    <arg name="model" default="burger" />
+    
+    <!-- 在参数服务器载入xacro文件 -->
+    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_sim_test)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+
+    <!-- 启动rviz -->
+    <!--
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_sim_test)/rviz/model.rviz" />
+    -->
+    <!--
+    <node pkg="rviz" type="rviz" name="rviz"/>
+    -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_sim_test)/rviz/smallhouse.rviz" />
+    <!-- 启动机器人状态和关节状态发布节点 -->
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" />
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" />
+
+</launch>
+
