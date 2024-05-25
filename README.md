@@ -1,3 +1,8 @@
+## 说明
+---
+语音导航机器人，建图过程中使用open vocabulary的Detic记录图像语义，使用whisper识别语音，BERT语义理解，CLIP计算图文相似度并规划位置<br />
+## 环境安装过程
+---
 安装ROS-noetic<br />
 wget http://fishros.com/install -O fishros && . fishros<br />
 安装导航包<br />
