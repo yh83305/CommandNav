@@ -1,11 +1,11 @@
-安装ROS-noetic
-wget http://fishros.com/install -O fishros && . fishros
-安装导航包
-sudo apt-get install ros-noetic-navigation
-sudo apt-get install ros-noetic-gmapping
-创建工作空间，将仓库文件作为功能包clone到src
-cd /home/ubuntu/Desktop/catkin_turtlebot3/src
-catkin_init_workspace
+安装ROS-noetic<br />
+wget http://fishros.com/install -O fishros && . fishros<br />
+安装导航包<br />
+sudo apt-get install ros-noetic-navigation<br />
+sudo apt-get install ros-noetic-gmapping<br />
+创建工作空间，将仓库文件作为功能包clone到src<br />
+cd /home/ubuntu/Desktop/catkin_turtlebot3/src<br />
+catkin_init_workspace<br />
 
 cd ..
 catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
